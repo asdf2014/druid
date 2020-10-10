@@ -36,6 +36,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import static org.apache.druid.java.util.common.StringUtils.removeChar;
+
 public class StatusResourceTest
 {
   @Test
@@ -68,7 +70,9 @@ public class StatusResourceTest
         "status.resource.test.runtime.properties"))));
     Map<String, String> returnedProperties = injector.getInstance(StatusResource.class).getProperties();
     Set<String> hiddenProperties = new HashSet<>();
-    Splitter.on(",").split(returnedProperties.get("druid.server.hiddenProperties")).forEach(hiddenProperties::add);
+    String originalHiddenProperties = returnedProperties.get("druid.server.hiddenProperties");
+    String croppedHiddenProperties = removeChar(removeChar(removeChar(originalHiddenProperties, '['), ']'), '"');
+    Splitter.on(",").split(croppedHiddenProperties).forEach(hiddenProperties::add);
     hiddenProperties.forEach((property) -> Assert.assertNull(returnedProperties.get(property)));
   }
 }
