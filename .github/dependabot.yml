@@ -1,0 +1,114 @@
+version: 2
+updates:
+- package-ecosystem: maven
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "21:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: io.netty:netty-transport-native-kqueue:osx-x86_64
+    versions:
+    - 4.1.59.Final
+    - 4.1.60.Final
+    - 4.1.62.Final
+  - dependency-name: io.netty:netty-transport-native-unix-common
+    versions:
+    - 4.1.59.Final
+    - 4.1.60.Final
+    - 4.1.62.Final
+  - dependency-name: io.netty:netty-transport-native-epoll:linux-x86_64
+    versions:
+    - 4.1.59.Final
+    - 4.1.60.Final
+    - 4.1.62.Final
+  - dependency-name: io.netty:netty-resolver-dns
+    versions:
+    - 4.1.59.Final
+    - 4.1.60.Final
+    - 4.1.62.Final
+  - dependency-name: io.netty:netty-resolver
+    versions:
+    - 4.1.59.Final
+    - 4.1.60.Final
+    - 4.1.62.Final
+  - dependency-name: io.netty:netty-handler-proxy
+    versions:
+    - 4.1.59.Final
+    - 4.1.60.Final
+    - 4.1.62.Final
+  - dependency-name: io.netty:netty-handler
+    versions:
+    - 4.1.59.Final
+    - 4.1.60.Final
+    - 4.1.62.Final
+  - dependency-name: io.netty:netty-codec-socks
+    versions:
+    - 4.1.59.Final
+    - 4.1.60.Final
+    - 4.1.62.Final
+  - dependency-name: io.netty:netty-codec-http
+    versions:
+    - 4.1.59.Final
+    - 4.1.60.Final
+    - 4.1.62.Final
+  - dependency-name: io.netty:netty-codec-dns
+    versions:
+    - 4.1.59.Final
+    - 4.1.60.Final
+    - 4.1.62.Final
+  - dependency-name: io.netty:netty-common
+    versions:
+    - 4.1.59.Final
+    - 4.1.60.Final
+    - 4.1.62.Final
+  - dependency-name: io.netty:netty-buffer
+    versions:
+    - 4.1.59.Final
+    - 4.1.60.Final
+    - 4.1.62.Final
+  - dependency-name: org.apache.logging.log4j:log4j-jul
+    versions:
+    - 2.14.0
+  - dependency-name: org.apache.logging.log4j:log4j-1.2-api
+    versions:
+    - 2.14.0
+  - dependency-name: org.apache.logging.log4j:log4j-slf4j-impl
+    versions:
+    - 2.14.0
+  - dependency-name: org.apache.logging.log4j:log4j-core
+    versions:
+    - 2.14.0
+  - dependency-name: org.apache.logging.log4j:log4j-api
+    versions:
+    - 2.14.0
+  - dependency-name: org.eclipse.jetty:jetty-security
+    versions:
+    - 11.0.0
+  - dependency-name: org.eclipse.jetty:jetty-util
+    versions:
+    - 11.0.0
+  - dependency-name: org.eclipse.jetty:jetty-rewrite
+    versions:
+    - 11.0.0
+  - dependency-name: org.eclipse.jetty:jetty-proxy
+    versions:
+    - 11.0.0
+  - dependency-name: org.eclipse.jetty:jetty-servlets
+    versions:
+    - 11.0.0
+  - dependency-name: org.eclipse.jetty:jetty-servlet
+    versions:
+    - 11.0.0
+  - dependency-name: org.eclipse.jetty:jetty-server
+    versions:
+    - 11.0.0
+  - dependency-name: org.eclipse.jetty:jetty-io
+    versions:
+    - 11.0.0
+  - dependency-name: org.eclipse.jetty:jetty-http
+    versions:
+    - 11.0.0
+  - dependency-name: org.eclipse.jetty:jetty-client
+    versions:
+    - 11.0.0
