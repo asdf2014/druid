@@ -16,7 +16,7 @@
   ~ specific language governing permissions and limitations
   ~ under the License.
   -->
-
+ 
 # Docker Test Image for Druid
 
 Integration tests need a Druid cluster. While some tests support using
